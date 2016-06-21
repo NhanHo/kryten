@@ -27,7 +27,7 @@ defmodule Kryten.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.5.0"}
+      {:httpoison, "~> 0.8.0"}
     ]
   end
 end
