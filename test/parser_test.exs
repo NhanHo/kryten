@@ -7,6 +7,13 @@ defmodule ParserTest do
     assert length(result) == 0
   end
 
+  test "parsing with end of line at the end" do
+    file = "User-agent: *\nDisallow: /\n"
+
+    result = Kryten.Parser.parse file
+    assert result == [{"*", ["/"]}]
+  end
+
   test "parsing disallow all for all bots" do
     file = "User-agent: *\nDisallow: /"
 

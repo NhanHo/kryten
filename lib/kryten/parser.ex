@@ -5,6 +5,7 @@ defmodule Kryten.Parser do
     file
     |> String.split("\n")
     |> parse_lines
+		|> (Enum.filter fn item -> (item !== nil) end)
   end
 
   defp parse_lines(lines), do: _parse_lines(lines, nil, [])
